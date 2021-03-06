@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://dubbo.apache.org/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+               http://www.springframework.org/schema/beans/spring-beans.xsd
+               http://dubbo.apache.org/schema/dubbo
+               http://dubbo.apache.org/schema/dubbo/dubbo.xsd">
+
+    <!-- 服务在注册中心中的名称。 -->
+    <dubbo:application name="user-service-consumer"></dubbo:application>
+    <!-- 注册中心地址 -->
+    <dubbo:registry address="zookeeper://127.0.0.1:2181"></dubbo:registry>
+    <!-- 配置Dubbo服务监控 -->
+    <dubbo:monitor protocol="registry" />
+
+    <!-- 生成远程服务接口代理 -->
+    <dubbo:reference id="orderService" interface="com.wez.api.order.svc.OrderService"></dubbo:reference>
+    <!-- 将接口实现类交给Spring容器 -->
+    <bean id="userService" class="com.wez.user.svc.impl.UserServiceImpl"></bean>
+
+</beans>

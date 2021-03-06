@@ -1,0 +1,4 @@
+# Project exclude paths
+/study-dubbo-order-service-provider/target/
+/study-dubbo-service-api/target/
+/study-dubbo-user-service-consumer/target/
