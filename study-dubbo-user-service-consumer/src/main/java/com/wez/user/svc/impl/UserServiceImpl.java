@@ -2,7 +2,7 @@ package com.wez.user.svc.impl;
 
 import com.wez.api.order.svc.OrderService;
 import com.wez.api.order.svc.vo.OrderVO;
-import com.wez.user.svc.UserService;
+import com.wez.api.user.svc.UserService;
 import org.apache.dubbo.config.annotation.DubboReference;
 import org.springframework.stereotype.Service;
 
@@ -16,7 +16,7 @@ import java.util.List;
 @Service
 public class UserServiceImpl implements UserService {
 
-    @DubboReference
+    @DubboReference(version = "2.0.0") // 调用指定版本的服务接口
     private OrderService orderService;
 
     /**

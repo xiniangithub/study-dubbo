@@ -1,4 +1,4 @@
-package com.wez.user.svc;
+package com.wez.api.user.svc;
 
 import com.wez.api.order.svc.vo.OrderVO;
 

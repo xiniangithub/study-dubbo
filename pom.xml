@@ -22,7 +22,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-        <study-dubbo.version>1.1</study-dubbo.version>
+        <study-dubbo.version>1.2</study-dubbo.version>
     </properties>
 
     <dependencyManagement>

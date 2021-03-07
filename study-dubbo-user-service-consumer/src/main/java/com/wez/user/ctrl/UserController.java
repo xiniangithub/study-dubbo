@@ -1,7 +1,7 @@
 package com.wez.user.ctrl;
 
 import com.wez.api.order.svc.vo.OrderVO;
-import com.wez.user.svc.UserService;
+import com.wez.api.user.svc.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
