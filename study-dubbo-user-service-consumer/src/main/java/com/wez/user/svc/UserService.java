@@ -1,5 +1,9 @@
 package com.wez.user.svc;
 
+import com.wez.api.order.svc.vo.OrderVO;
+
+import java.util.List;
+
 /**
  * 用户接口
  * @Author wez
@@ -11,6 +15,6 @@ public interface UserService {
      * 查询用户订单
      * @param userId 用户ID
      */
-    void listOrder(String userId);
+    List<OrderVO> listOrder(String userId);
 
 }

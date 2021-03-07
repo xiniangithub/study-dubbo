@@ -3,8 +3,7 @@ package com.wez.user.svc.impl;
 import com.wez.api.order.svc.OrderService;
 import com.wez.api.order.svc.vo.OrderVO;
 import com.wez.user.svc.UserService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.annotation.Order;
+import org.apache.dubbo.config.annotation.DubboReference;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -17,7 +16,7 @@ import java.util.List;
 @Service
 public class UserServiceImpl implements UserService {
 
-    @Autowired
+    @DubboReference
     private OrderService orderService;
 
     /**
@@ -26,7 +25,7 @@ public class UserServiceImpl implements UserService {
      * @return
      */
     @Override
-    public void listOrder(String userId) {
+    public List<OrderVO> listOrder(String userId) {
         System.out.println("查询"+userId+"订单开始。。。");
 
         System.out.println(userId+"订单：");
@@ -34,6 +33,7 @@ public class UserServiceImpl implements UserService {
         orders.forEach(order -> System.out.println(order));
 
         System.out.println("查询结束。");
+        return orders;
     }
 
 }

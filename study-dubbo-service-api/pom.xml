@@ -9,7 +9,6 @@
     <version>1.0-SNAPSHOT</version>
 
     <name>study-dubbo-service-api</name>
-    <!-- FIXME change it to the project's website -->
     <url>http://www.example.com</url>
 
     <properties>
@@ -17,10 +16,6 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
-
-    <dependencies>
-
-    </dependencies>
 
     <build>
         <finalName>study-dubbo-service-api</finalName>

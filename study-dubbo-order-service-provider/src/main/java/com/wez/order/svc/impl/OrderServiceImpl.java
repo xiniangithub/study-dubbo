@@ -2,16 +2,17 @@ package com.wez.order.svc.impl;
 
 import com.wez.api.order.svc.OrderService;
 import com.wez.api.order.svc.vo.OrderVO;
+import org.apache.dubbo.config.annotation.DubboService;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * OrderServiceImpl
- *
+ * 订单接口实现
  * @Author wez
  * @Time 2021/3/6 16:19
  */
+@DubboService // 暴露服务
 public class OrderServiceImpl implements OrderService {
 
     /**

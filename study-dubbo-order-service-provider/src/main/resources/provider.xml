@@ -7,7 +7,7 @@
                http://dubbo.apache.org/schema/dubbo
                http://dubbo.apache.org/schema/dubbo/dubbo.xsd">
 
-    <!-- 服务在注册中心中的名称。 -->
+    <!-- 服务在注册中心中的名称 -->
     <dubbo:application name="order-service-prodiver"></dubbo:application>
     <!-- 注册中心地址 -->
     <dubbo:registry address="zookeeper://127.0.0.1:2181"></dubbo:registry>
